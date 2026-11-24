@@ -26,14 +26,14 @@
                         in
                             {
                                 nixosConfigurations.promoter = configuration ;
-                                checks.${ system }.promoter = ( promoter-core.lib { } ).checks ;
+                                checks.${ system } = { } ;
                             } ;
                 in
                     {
                         lib =
                             { ... } :
                                 {
-                                    checks = ( promoter-core.lib { } ).checks ;
+                                    checks = { } ;
                                     implementation = implementation ;
                                 } ;
                             nixosConfigurations = implementation.nixosConfigurations ;
