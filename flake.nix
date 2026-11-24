@@ -4,7 +4,7 @@
         {
             nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11" ;
             promoter-core.url = "github:AFnRFCb7/5ed1b239-ef69-406b-a793-03d07826b6a5" ;
-            ssh-key-core.url = "github:AFnRFCb7/github:170b1412-04a3-405d-82c7-52e1706e0382" ;
+            ssh-key.url = "githubAFnRFCb7/f2a72e50-6d44-49ec-80f0-98ecfb3cfd97";
         } ;
     outputs =
         { nixpkgs , self , promoter-core , ssh-key-core } :
