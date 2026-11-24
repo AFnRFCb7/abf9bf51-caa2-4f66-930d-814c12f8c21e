@@ -26,14 +26,40 @@
                         in
                             {
                                 nixosConfigurations.promoter = configuration ;
-                                checks.${ system } = { } ;
+                                # checks.${ system } = { } ;
                             } ;
                 in
                     {
                         lib =
                             { ... } :
                                 {
-                                    checks = { } ;
+check =
+    {
+        nixosTest ,
+        obviated-by
+    } :
+    {
+    } :
+    {
+    } :
+        let
+            test =
+                nixosTest
+                    {
+                        name = "promoter-machine" ;
+                        nodes.client = { ... } : { } ;
+                        testScript =
+                            ''
+                                client.wait_for_unit("multi-user.target")
+                            '' ;
+                    } ;
+            in
+                {
+                    obviated-by = obviated-by ;
+                    test = test ;
+                    type = "promoter-machine" ;
+                } ;
+                                    # checks = { } ;
                                     implementation = implementation ;
                                 } ;
                             nixosConfigurations = implementation.nixosConfigurations ;
