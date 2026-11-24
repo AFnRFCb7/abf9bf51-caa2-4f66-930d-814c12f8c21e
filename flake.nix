@@ -6,7 +6,7 @@
             ssh-key-core.url = "github:AFnRFCb7/github:170b1412-04a3-405d-82c7-52e1706e0382" ;
         } ;
     outputs =
-        { nixpkgs , self , promoter-core , promoter-proprietary , ssh-key-core } :
+        { nixpkgs , self , promoter-core , ssh-key-core } :
             let
                 implementation =
                     let
