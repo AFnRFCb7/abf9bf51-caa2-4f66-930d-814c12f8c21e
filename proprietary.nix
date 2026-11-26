@@ -2,8 +2,36 @@
     {
         config =
             {
+                environment =
+                    {
+                        sessionVariables =
+                            {
+                                HALT = config.promoter.polling.bin.halt ;
+                                POLL = config.promoter.polling.bin.poll ;
+                            } ;
+                    } ;
                 promoter.polling =
                     {
+                        "personal.core" =
+                            {
+                                committer =
+                                    {
+                                        name = "Emory Merryman" ;
+                                        email = "emory.merryman@gmail.com" ;
+                                        ssh-command = "${ pkgs.openssh }/bin/ssh -i ${ config.ssh-key } -o StrictHostKeyChecking=accept-new" ;
+                                    } ;
+                                url = "git@github.com:AFnRFCb7/ed1391c1-4e58-49ea-86dd-f0e982fd5805.git" ;
+                            } ;
+                        "personal.machine" =
+                            {
+                                committer =
+                                    {
+                                        name = "Emory Merryman" ;
+                                        email = "emory.merryman@gmail.com" ;
+                                        ssh-command = "${ pkgs.openssh }/bin/ssh -i ${ config.ssh-key } -o StrictHostKeyChecking=accept-new" ;
+                                    } ;
+                                url = "git@github.com:AFnRFCb7/1bee96a9-a46e-49b6-b2f4-3a81676015ce.git" ;
+                            } ;
                         "promoter.core" =
                             {
                                 committer =

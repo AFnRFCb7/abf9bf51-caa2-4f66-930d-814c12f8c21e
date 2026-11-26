@@ -33,32 +33,32 @@
                         lib =
                             { ... } :
                                 {
-check =
-    {
-        nixosTest ,
-        obviated-by
-    } :
-    {
-    } :
-    {
-    } :
-        let
-            test =
-                nixosTest
-                    {
-                        name = "promoter-machine" ;
-                        nodes.client = { ... } : { } ;
-                        testScript =
-                            ''
-                                client.wait_for_unit("multi-user.target")
-                            '' ;
-                    } ;
-            in
-                {
-                    obviated-by = obviated-by ;
-                    test = test ;
-                    type = "promoter-machine" ;
-                } ;
+                                    check =
+                                        {
+                                            nixosTest ,
+                                            obviated-by
+                                        } :
+                                        {
+                                        } :
+                                        {
+                                        } :
+                                            let
+                                                test =
+                                                    nixosTest
+                                                        {
+                                                            name = "promoter-machine" ;
+                                                            nodes.client = { ... } : { } ;
+                                                            testScript =
+                                                                ''
+                                                                    client.wait_for_unit("multi-user.target")
+                                                                '' ;
+                                                        } ;
+                                                in
+                                                    {
+                                                        obviated-by = obviated-by ;
+                                                        test = test ;
+                                                        type = "promoter-machine" ;
+                                                    } ;
                                     # checks = { } ;
                                     implementation = implementation ;
                                 } ;
