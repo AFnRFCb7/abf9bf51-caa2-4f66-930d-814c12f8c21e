@@ -22,6 +22,7 @@
                                             ./proprietary.nix
                                             ( ssh-key-core.lib { } ).implementation
                                             ./hardware-configuration.nix
+                                            ./filesystem.nix
                                         ] ;
                                 } ;
                         in
