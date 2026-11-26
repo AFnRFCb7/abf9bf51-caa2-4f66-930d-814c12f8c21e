@@ -6,8 +6,8 @@
                     {
                         sessionVariables =
                             {
-                                HALT = config.promoter.polling.bin.halt ;
-                                POLL = config.promoter.polling.bin.poll ;
+                                HALT = config.promoter.bin.halt ;
+                                POLL = config.promoter.bin.poll ;
                             } ;
                     } ;
                 promoter.polling =
