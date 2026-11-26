@@ -21,7 +21,7 @@
                                             ( promoter-core.lib { } ).implementation
                                             ./proprietary.nix
                                             ( ssh-key-core.lib { } ).implementation
-                                            ./hardware-configuration
+                                            ./hardware-configuration.nix
                                         ] ;
                                 } ;
                         in
